@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: api-dannydavidson-com
+  annotations:
+    kubernetes.io/ingress.allowHTTP: "false"
+spec:
+  tls:
+  - secretName: api-dannydavidson-com
+  # backend:
+  #   serviceName: ledger-graph
+  #   servicePort: 80
+  rules:
+  - http:
+      paths:
+      - path: /ledger-graph/*
+        backend:
+          serviceName: ledger-graph
+          servicePort: 80

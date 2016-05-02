@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  tls.crt: {{cert}}
+  tls.key: {{key}}
+kind: Secret
+metadata:
+  name: api-dannydavidson-com
+  namespace: default
+type: Opaque

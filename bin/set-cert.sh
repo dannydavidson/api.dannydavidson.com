@@ -1,0 +1,5 @@
+cert=$(cat $1 | base64)
+key=$(cat $2 | base64)
+
+sed "s/{{cert}}/${cert}/g;s/{{key}}/${key}/g" cert.yml > cert.set.yml
+kubectl apply -f cert.set.yml
