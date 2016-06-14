@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 cert=$(cat $1 | base64)
 key=$(cat $2 | base64)
 

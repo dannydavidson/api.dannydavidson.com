@@ -7,13 +7,10 @@ metadata:
 spec:
   tls:
   - secretName: api-dannydavidson-com
-  # backend:
-  #   serviceName: ledger-graph
-  #   servicePort: 80
   rules:
   - http:
       paths:
-      - path: /ledger-graph/*
+      - path: /neo-app/*
         backend:
-          serviceName: ledger-graph
+          serviceName: neo-app
           servicePort: 80
