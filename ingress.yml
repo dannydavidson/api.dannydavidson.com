@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: api-dannydavidson-com
   annotations:
-    kubernetes.io/ingress.allowHTTP: "false"
+    kubernetes.io/ingress.allow-http: "false"
 spec:
   tls:
   - secretName: api-dannydavidson-com
